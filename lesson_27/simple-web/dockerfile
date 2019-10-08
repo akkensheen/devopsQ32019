@@ -1,0 +1,12 @@
+FROM centos/httpd
+
+WORKDIR /web
+
+COPY . .
+
+RUN bash web_server.sh
+RUN curl -k https://busybox.net/downloads/binaries/1.28.1-defconfig-multiarch/busybox-x86_64 -o busybox && chmod +x busybox
+
+EXPOSE 8080:8080
+
+CMD nohup ./busybox httpd -f -p 8080

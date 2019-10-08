@@ -1,1 +1,1 @@
-# lesson_27
+# Repo for CI lessons of DevOps course

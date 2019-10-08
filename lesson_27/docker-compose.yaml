@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  web-app-01:
+    build: ./simple-web
+    ports: 
+    - "8080:8080"
+    restart: always
