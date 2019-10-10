@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker -it ubuntu bash
+docker run -it ubuntu bash
 docker diff
 docker commit $(docker ps -q) ubuntu:modded
 
