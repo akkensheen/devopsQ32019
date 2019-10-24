@@ -24,6 +24,6 @@ os.path.abspath('folder')
 os.path.basename('/home/amuratov/pipenv')
 os.path.exists('/home/amuratov/pipenv')
 
-os.access('/home/amuratov/docker', os.W_OK)
+os.access('/home/amuratov/devopsQ32019/README.md', os.W_OK)
 os.chmod('/home/amuratov/',400)
-os.access('/home/amuratov/docker', os.W_OK)
+os.access('/home/amuratov/devopsQ32019/README.md', os.W_OK)
