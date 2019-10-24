@@ -13,7 +13,7 @@ deactivate
 pip3 install --user pipenv
 PATH=~/.local/bin:$PATH
 pip3 show pipenv
-mkdir pipenv && pipenv install requests
+mkdir pipenv && cd pipenv && pipenv install requests
 cat > curl.py <<EOF
 import requests
 response = requests.get('https://httpbin.org/ip')
@@ -24,3 +24,8 @@ pipenv graph
 pipenv shell
 pip3 install docker && exit
 pipenv clean
+
+cd ~
+cp -r pipenv/ pipenv_dev/ && cd pipenv_dev/ && pipenv install
+pipenv run python curl.py
+pipenv graph
